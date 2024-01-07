@@ -135,8 +135,8 @@ if __name__ == '__main__':
 
 	# on some systems apparmor allows for gpsfake only /tmp/gpsfake-*.sock
 	# we need to handle this by adding pty device to apparmor configuration
-	apparmor = "/etc/apparmor.d/usr.sbin.gpsd"
-	os.system("sudo aa-complain %s" % apparmor)
+	# apparmor = "/etc/apparmor.d/usr.sbin.gpsd"
+	# os.system("sudo aa-complain %s" % apparmor)
 
 	# add device to gpsd
 	try:

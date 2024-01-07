@@ -5,8 +5,8 @@ After=multi-user.target gpsd.socket
 
 [Service]
 Type=idle
-User=gpsd
-ExecStart=/usr/bin/python3 /usr/bin/virtualgps.py
+#User=gpsd
+ExecStart=/usr/bin/python3 /usr/bin/virtualgps.py --config /etc/location.conf --profile DEFAULT
 ExecStartPost=sleep 3
 ExecStartPost=+/usr/sbin/gpsdctl add /tmp/vgps
 ExecStopPost=+/usr/sbin/gpsdctl remove /tmp/vgps
